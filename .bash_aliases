@@ -56,7 +56,7 @@ alias t-m="git switch talos-master; git pull"
 alias mb="${HOME}/scripts/make_branch.sh"
 alias bekind="${HOME}/gh/devops-utilities/kind/start-kind-cluster.sh"
 
-alias helm='docker run -e KUBECONFIG="$KUBECONFIGONDOCKER" -ti --rm -v $(pwd):/apps -v ~/.kube:/root/.kube -v ~/.config/helm:/root/.config/helm -v ~/.cache/helm:/root/.cache/helm -v ~/.helm:/root/.helm alpine/helm'
+alias helm='docker run -e KUBECONFIG="$KUBECONFIGONDOCKER" -ti --user $(id -u):$(id -g) --rm -v $(pwd):/apps -v ~/.kube:/root/.kube -v ~/.config/helm:/root/.config/helm -v ~/.cache/helm:/root/.cache/helm -v ~/.helm:/root/.helm alpine/helm'
 alias ans_lap="ansible-playbook -K ty-tool.yml"
 alias zzz="pkill zoom"
 
