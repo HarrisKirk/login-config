@@ -49,14 +49,16 @@ alias bgctl="docker container run --network=host --rm --name=bgctl -v /tmp:/tmp 
 alias gh-un="cd ~/gh/unicron"
 alias gh-un-cert="cd ~/gh/unicron/base/cert-manager"
 alias gh-un-mult="cd ~/gh/unicron/base/multus-cni"
+alias gh-un-wh="cd ~/gh/unicron/base/whereabouts"
 alias gh-sw="cd ~/gh/site_washington"
 alias gh-du="cd ~/gh/devops-utilities"
+alias gh-helm="cd ~/gh/helm-sandbox"
 
 alias t-m="git switch talos-master; git pull"
 alias mb="${HOME}/scripts/make_branch.sh"
 alias bekind="${HOME}/gh/devops-utilities/kind/start-kind-cluster.sh"
 
-alias helm='docker run -e KUBECONFIG="$KUBECONFIGONDOCKER" -ti --user $(id -u):$(id -g) --rm -v $(pwd):/apps -v ~/.kube:/root/.kube -v ~/.config/helm:/root/.config/helm -v ~/.cache/helm:/root/.cache/helm -v ~/.helm:/root/.helm alpine/helm'
+alias helm='docker run -e KUBECONFIG="$KUBECONFIGONDOCKER" -ti --rm -v $(pwd):/apps -v ~/.kube:/root/.kube -v ~/.config/helm:/root/.config/helm -v ~/.cache/helm:/root/.cache/helm -v ~/.helm:/root/.helm alpine/helm'
 alias ans_lap="ansible-playbook -K ty-tool.yml"
 alias zzz="pkill zoom"
 
