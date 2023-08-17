@@ -7,6 +7,8 @@ alias vib_=". ~/.bashrc"
 alias via="vi ~/.bash_aliases"
 alias via_=". ~/.bash_aliases"
 
+alias vimrc="vim ~/.vimrc"
+
 #
 # quick git aliases
 #
@@ -59,6 +61,7 @@ alias mb="${HOME}/scripts/make_branch.sh"
 alias bekind="${HOME}/gh/devops-utilities/kind/start-kind-cluster.sh"
 
 alias helm='docker run -e KUBECONFIG="$KUBECONFIGONDOCKER" -ti --rm -v $(pwd):/apps -v ~/.kube:/root/.kube -v ~/.config/helm:/root/.config/helm -v ~/.cache/helm:/root/.cache/helm -v ~/.helm:/root/.helm alpine/helm'
+alias helmfile='docker run --rm --net=host -v "${HOME}/.kube:/root/.kube" -v "${HOME}/.config/helm:/root/.config/helm" -v "${PWD}:/wd" --workdir /wd ghcr.io/helmfile/helmfile:latest'
 alias ans_lap="ansible-playbook -K ty-tool.yml"
 alias zzz="pkill zoom"
 
