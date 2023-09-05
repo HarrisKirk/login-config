@@ -3,4 +3,5 @@
 !.gitignore
 !.bashrc
 !.bash_aliases
+!.vimrc
 
