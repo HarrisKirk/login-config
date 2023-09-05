@@ -1,4 +1,3 @@
-
 #
 # Edit and apply .bashrc and .bash_aliases
 #
@@ -29,7 +28,9 @@ alias al="docker login -u access-admin -p ${ARTIFACTORY_PW} artifactory.bos.berk
 alias loop_status="while true; do clear; echo '::::: \$git status :::::'; git status; sleep 1; done"
 alias loop_log="while true; do clear; echo '::::: \$git log --oneline :::::'; git log --oneline; sleep 1; done"
 alias git-class="tilix --session=$HOME/Desktop/git-class.json"
-alias l="exa --long --no-user --no-time --no-filesize --tree --level=2 --no-permissions"
+alias l1="exa --long --no-user --no-time --no-filesize --tree --level=1 --no-permissions"
+alias l2="exa --long --no-user --no-time --no-filesize --tree --level=2 --no-permissions"
+alias l3="exa --long --no-user --no-time --no-filesize --tree --level=3 --no-permissions"
 
 # vpn up/down/status
 alias vu="nmcli con up id 'Berkshiregrey AWS'"
@@ -60,8 +61,9 @@ alias t-m="git switch talos-master; git pull"
 alias mb="${HOME}/scripts/make_branch.sh"
 alias bekind="${HOME}/gh/devops-utilities/kind/start-kind-cluster.sh"
 
-alias helm='docker run -e KUBECONFIG="$KUBECONFIGONDOCKER" -ti --rm -v $(pwd):/apps -v ~/.kube:/root/.kube -v ~/.config/helm:/root/.config/helm -v ~/.cache/helm:/root/.cache/helm -v ~/.helm:/root/.helm alpine/helm'
+#alias helm='docker run -e KUBECONFIG="$KUBECONFIGONDOCKER" -ti --user $(id -u):$(id -g) --rm -v $(pwd):/apps -v ~/.kube:/root/.kube -v ~/.config/helm:/root/.config/helm -v ~/.cache/helm:/root/.cache/helm -v ~/.helm:/root/.helm alpine/helm'
 alias helmfile='docker run --rm --net=host -v "${HOME}/.kube:/root/.kube" -v "${HOME}/.config/helm:/root/.config/helm" -v "${PWD}:/wd" --workdir /wd ghcr.io/helmfile/helmfile:latest'
 alias ans_lap="ansible-playbook -K ty-tool.yml"
 alias zzz="pkill zoom"
+alias app="./apply_template.sh kind-unigone"
 
