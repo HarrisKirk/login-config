@@ -52,6 +52,7 @@ alias bgctl="docker container run --network=host --rm --name=bgctl -v /tmp:/tmp 
 alias gh-un="cd ~/gh/unicron"
 alias gh-un-cert="cd ~/gh/unicron/base/cert-manager"
 alias gh-un-mult="cd ~/gh/unicron/base/multus-cni"
+alias gh-un-rook="cd ~/gh/unicron/base/rook"
 alias gh-un-wh="cd ~/gh/unicron/base/whereabouts"
 alias gh-sw="cd ~/gh/site_washington"
 alias gh-du="cd ~/gh/devops-utilities"

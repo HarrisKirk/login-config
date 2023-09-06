@@ -1,4 +1,4 @@
-
+" Vundle 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -25,6 +25,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 "
+" Below is my vimrc without vundle
+"
 colorscheme desert
 set softtabstop=2
 syntax on
@@ -32,3 +34,9 @@ set number
 set autoindent
 set directory=$HOME/.vim/tmp/swap   " swap files
 set expandtab
+set autowrite
+inoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+
+set belloff=all
+
