@@ -7,6 +7,7 @@ alias via="vi ~/.bash_aliases"
 alias via_=". ~/.bash_aliases"
 
 alias vimrc="vim ~/.vimrc"
+alias tc="vim ~/.tmux.conf"
 
 #
 # quick git aliases
