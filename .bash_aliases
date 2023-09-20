@@ -42,6 +42,7 @@ alias start_day="vd; vu; vlogout; vlogin"
 # kubectl
 alias kk="kubectl"
 alias kkcluster="kubectl config current-context"
+alias kkget="kubectl api-resources --verbs=list --namespaced -o name   | xargs -n 1 kubectl get -o custom-columns=NAME:.metadata.name,KIND:.kind --show-kind --ignore-not-found  -n cert-manager"
 
 # BG sshing
 alias brooks="ssh -A harris.kirk@bastion.brooks-itf.everest.bgrey.io"
