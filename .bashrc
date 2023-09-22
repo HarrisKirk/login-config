@@ -155,6 +155,6 @@ if [ -f ~/.bash_bg ]; then
 fi
 
 # secrets such as passwords and keys (definitely not stored in git)
-if [ -f ~/.bashrc_secrets ]; then
-    . ~/.bashrc_secrets
+if [ -f ~/.bash_secrets ]; then
+    . ~/.bash_secrets
 fi
