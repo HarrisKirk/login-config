@@ -1,5 +1,6 @@
 # Ignore all files
 *
+# Except these:
 !.gitignore
 !.bashrc
 !.bash_aliases
