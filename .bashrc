@@ -147,9 +147,14 @@ source "$OSH"/oh-my-bash.sh
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-if [ -f ~/.bashrc.hk ]; then
-    . ~/.bashrc.hk
+if [ -f ~/.bash_hk ]; then
+    . ~/.bash_hk
 fi
-if [ -f ~/.bashrc.bg ]; then
-    . ~/.bashrc.bg
+if [ -f ~/.bash_bg ]; then
+    . ~/.bash_bg
+fi
+
+# secrets such as passwords and keys (definitely not stored in git)
+if [ -f ~/.bashrc_secrets ]; then
+    . ~/.bashrc_secrets
 fi
