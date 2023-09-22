@@ -9,7 +9,7 @@ export OSH=~/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="kitsune"
+OSH_THEME="font"
 
 # Uncomment the following line to use case-sensitive completion.
 # OMB_CASE_SENSITIVE="true"
@@ -99,6 +99,7 @@ aliases=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  git
   bashmarks
 )
 
@@ -129,6 +130,7 @@ source "$OSH"/oh-my-bash.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+# 
 
 # Set personal aliases, overriding those provided by oh-my-bash libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-bash
@@ -139,31 +141,15 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-
-# Custom items for me
+#\
+# Add machine-specific settings (such as personal or company)
+#/
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-if [ -f ~/.secrets ]; then
-    . ~/.secrets
+if [ -f ~/.bashrc.hk ]; then
+    . ~/.bashrc.hk
 fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+if [ -f ~/.bashrc.bg ]; then
+    . ~/.bashrc.bg
 fi
-
-
-#export PS1="\u@\h in \[\e[32m\]\w \[\e[93m\]\$(parse_git_branch)\[\e[00m\]$ "
-export PS1="\[\e[32m\]\w \[\e[93m\]\$(parse_git_branch)\[\e[00m\]\n$ "
-
-export PATH=${PATH}:/home/berkshiregrey.com/harris.kirk/.local/bin
-export PATH=${PATH}:/home/berkshiregrey.com/harris.kirk/.kubescape/bin
-source ~/.bg-auth/profile &> ~/.bg-auth/source_status
-
