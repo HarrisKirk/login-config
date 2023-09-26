@@ -147,11 +147,10 @@ source "$OSH"/oh-my-bash.sh
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-if [ -f ~/.bash_hk ]; then
-    . ~/.bash_hk
-fi
-if [ -f ~/.bash_bg ]; then
+if [[ $HOME == *berkshire* ]]; then
     . ~/.bash_bg
+else
+    . ~/.bash_hk
 fi
 
 # secrets such as passwords and keys (definitely not stored in git)
