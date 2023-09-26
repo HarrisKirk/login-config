@@ -1,0 +1,3 @@
+# ignore these for ALL repositories
+# all directories starting with zx
+zx*

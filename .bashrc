@@ -157,3 +157,6 @@ fi
 if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
 fi
+
+git config --global core.excludesfile ~/.gitignore_global
+
