@@ -159,4 +159,7 @@ if [ -f ~/.bash_secrets ]; then
 fi
 
 git config --global core.excludesfile ~/.gitignore_global
+export GIT_EDITOR=vim
+set +o noclobber 
+source ~/.bg-auth/profile &> ~/.bg-auth/source_status
 
