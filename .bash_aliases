@@ -51,12 +51,14 @@ alias sidero="ssh -A harris.kirk@sidero.unicron.bg.bgrey.io"
 alias bgctl="docker container run --network=host --rm --name=bgctl -v /tmp:/tmp -v $(pwd):/opt/bg-devops-cli/app/foobar -v ~/.ssh:/root/.ssh artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli"
 
 # CDing to github directories
+alias gh="cd ~/gh"
 alias gh-un="cd ~/gh/unicron"
 alias gh-un-cert="cd ~/gh/unicron/base/cert-manager"
 alias gh-un-mult="cd ~/gh/unicron/base/multus-cni"
 alias gh-un-rook="cd ~/gh/unicron/base/rook"
 alias gh-un-wh="cd ~/gh/unicron/base/whereabouts"
 alias gh-sw="cd ~/gh/site_washington"
+alias gh-sf="cd ~/gh/site_fuji"
 alias gh-du="cd ~/gh/devops-utilities"
 alias gh-helm="cd ~/gh/helm-sandbox"
 
