@@ -163,3 +163,4 @@ export GIT_EDITOR=vim
 set +o noclobber 
 source ~/.bg-auth/profile &> ~/.bg-auth/source_status
 
+TZ='America/New_York'; export TZ
