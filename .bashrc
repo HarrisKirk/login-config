@@ -164,3 +164,5 @@ set +o noclobber
 source ~/.bg-auth/profile &> ~/.bg-auth/source_status
 
 TZ='America/New_York'; export TZ
+source /home/berkshiregrey/harris.kirk/git-subrepo/.rc
+source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
