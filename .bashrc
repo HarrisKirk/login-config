@@ -128,8 +128,3 @@ fi
 git config --global core.excludesfile ~/.gitignore_global
 export GIT_EDITOR=vim
 set +o noclobber 
-source ~/.bg-auth/profile &> ~/.bg-auth/source_status
-
-TZ='America/New_York'; export TZ
-source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
-source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
