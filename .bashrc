@@ -128,3 +128,11 @@ fi
 git config --global core.excludesfile ~/.gitignore_global
 export GIT_EDITOR=vim
 set +o noclobber 
+
+
+cyan='\033[0;36m'
+clear='\033[0m'
+
+export PS1="\u@\h ${cyan}\W${clear}\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+
