@@ -117,6 +117,9 @@ fi
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+parse_dirs() {
+  echo '[${PWD#${PWD%/*/*}/}]'
+}
 
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
@@ -129,10 +132,9 @@ git config --global core.excludesfile ~/.gitignore_global
 export GIT_EDITOR=vim
 set +o noclobber 
 
-
 cyan='\033[0;36m'
+yellow='\e[93m'
 clear='\033[0m'
 
-export PS1="\u@\h ${cyan}\W${clear}\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
+export PS1="laptop ${cyan}$(parse_dirs)${clear}\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
