@@ -125,8 +125,9 @@ parse_dirs() {
   echo '[${PWD#${PWD%/*/*}/}]' 
 }
 cyan='\033[0;36m'
+yellow='\e[93m'
 clear='\033[0m'
-export PS1="[laptop] ${cyan}$(parse_dirs)${clear}\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="[laptop] ${cyan}$(parse_dirs)${clear}${yellow}$(parse_git_branch)\[\033[00m\] $ "
 
 
 git config --global core.excludesfile ~/.gitignore_global
