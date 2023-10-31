@@ -113,28 +113,23 @@ if [[ $HOME == *berkshire* ]]; then
 else
     . ~/.bash_hk
 fi
-
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-parse_dirs() {
-  echo '[${PWD#${PWD%/*/*}/}]'
-}
-
-export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
 # secrets such as passwords and keys (definitely not stored in remote git)
 if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
 fi
 
-git config --global core.excludesfile ~/.gitignore_global
-export GIT_EDITOR=vim
-set +o noclobber 
-
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+parse_dirs() {
+  echo '[${PWD#${PWD%/*/*}/}]' 
+}
 cyan='\033[0;36m'
 yellow='\e[93m'
 clear='\033[0m'
+
+git config --global core.excludesfile ~/.gitignore_global
+export GIT_EDITOR=vim
 
 export PS1="laptop ${cyan}$(parse_dirs)${clear}\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
