@@ -122,7 +122,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 parse_dirs() {
-  echo '${PWD#${PWD%/*/*}/}' 
+  echo '.../${PWD#${PWD%/*/*}/}' 
 }
 cyan='\033[0;36m'
 yellow='\e[93m'
