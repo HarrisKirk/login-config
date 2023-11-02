@@ -122,7 +122,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 parse_dirs() {
-  echo '[${PWD#${PWD%/*/*}/}]' 
+  echo '${PWD#${PWD%/*/*}/}' 
 }
 cyan='\033[0;36m'
 yellow='\e[93m'
@@ -131,5 +131,5 @@ clear='\033[0m'
 git config --global core.excludesfile ~/.gitignore_global
 export GIT_EDITOR=vim
 
-export PS1="laptop ${cyan}$(parse_dirs)${clear}\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="[laptop] ${cyan}$(parse_dirs)${clear}${yellow}\$(parse_git_branch)${clear} $ "
 
