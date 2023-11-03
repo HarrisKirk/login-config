@@ -66,7 +66,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1 foo"
     ;;
 *)
     ;;
@@ -118,18 +118,7 @@ if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
 fi
 
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-parse_dirs() {
-  echo '.../${PWD#${PWD%/*/*}/}' 
-}
-cyan='\033[0;36m'
-yellow='\e[93m'
-clear='\033[0m'
-
 git config --global core.excludesfile ~/.gitignore_global
 export GIT_EDITOR=vim
 
-export PS1="[laptop] ${cyan}$(parse_dirs)${clear}${yellow}\$(parse_git_branch)${clear} $ "
 
