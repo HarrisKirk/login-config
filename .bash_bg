@@ -1,8 +1,6 @@
 git config --global user.email "Harris.Kirk@berkshiregrey.com"
 git config --global user.name "Harris Kirk"
 
-#export PS1="\u@\h in \[\e[32m\]\w \[\e[93m\]\$(parse_git_branch)\[\e[00m\]$ "
-export PS1="\[\e[32m\]\w \[\e[93m\]\$(parse_git_branch)\[\e[00m\]\n$ "
 
 export PATH=${PATH}:/home/berkshiregrey.com/harris.kirk/.local/bin
 export PATH=${PATH}:/home/berkshiregrey.com/harris.kirk/.kubescape/bin
