@@ -4,4 +4,6 @@ set noautoindent
 set tabstop=2
 set shiftwidth=5
 :colorscheme delek
+inoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
 
