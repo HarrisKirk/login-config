@@ -22,23 +22,6 @@ alias ggraph="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cg
 # Vault
 alias vd="vault server -dev"
 
-# Artifactory
-alias al="docker login -u access-admin -p ${ARTIFACTORY_PW} artifactory.bos.berkshiregrey.com"
-
-# git class - dead
-alias loop_status="while true; do clear; echo '::::: \$git status :::::'; git status; sleep 1; done"
-alias loop_log="while true; do clear; echo '::::: \$git log --oneline :::::'; git log --oneline; sleep 1; done"
-alias git-class="tilix --session=$HOME/Desktop/git-class.json"
-alias l1="exa --long --no-user --no-time --no-filesize --tree --level=1 --no-permissions"
-alias l2="exa --long --no-user --no-time --no-filesize --tree --level=2 --no-permissions"
-alias l3="exa --long --no-user --no-time --no-filesize --tree --level=3 --no-permissions"
-
-# vpn up/down/status
-alias vu="nmcli con up id 'Berkshiregrey AWS'"
-alias vd="nmcli con down id 'Berkshiregrey AWS'"
-alias vs="nmcli con"
-alias start_day="vd; vu; vlogout; vlogin"
-
 # kubectl
 alias kk="kubectl"
 alias kkcluster="kubectl config current-context"
@@ -47,8 +30,6 @@ alias kkget="kubectl api-resources --verbs=list --namespaced -o name   | xargs -
 # BG sshing
 alias brooks="ssh -A harris.kirk@bastion.brooks-itf.everest.bgrey.io"
 alias sidero="ssh -A harris.kirk@sidero.unicron.bg.bgrey.io"
-
-alias bgctl="docker container run --network=host --rm --name=bgctl -v /tmp:/tmp -v $(pwd):/opt/bg-devops-cli/app/foobar -v ~/.ssh:/root/.ssh artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli"
 
 # CDing to github directories
 alias gh="cd ~/gh"
