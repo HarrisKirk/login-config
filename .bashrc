@@ -113,6 +113,15 @@ if [[ $HOME == *berkshire* ]]; then
 else
     . ~/.bash_hk
 fi
+
+cyan='\033[0;36m'
+clear='\033[0m'
+
+export PS1="\u@\h ${cyan}\W${clear}\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # secrets such as passwords and keys (definitely not stored in remote git)
 if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
