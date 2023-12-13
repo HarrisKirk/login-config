@@ -55,9 +55,5 @@ alias zzz="pkill zoom"
 alias app="./apply_template.sh kind-unigone"
 alias rmz="rm *.tgz"
 
-# bgctl
-# ALIAS START
-alias bgctl="docker container run -it --rm --name=bgctl --user :  -it -v /tmp:/tmp -v ~/.kube:/opt/bg-devops-cli/app/.kube -e KUBECONFIG=/opt/bg-devops-cli/app/.kube/config:/opt/bg-devops-cli/app/.kube/config-auto artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest"
-# ALIAS END
 
 source ~/.bg-auth/profile &> ~/.bg-auth/source_status
