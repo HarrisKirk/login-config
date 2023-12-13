@@ -61,6 +61,7 @@ alias gh-sw="cd ~/gh/site_washington"
 alias gh-sf="cd ~/gh/site_fuji"
 alias gh-du="cd ~/gh/devops-utilities"
 alias gh-helm="cd ~/gh/helm-sandbox"
+alias gh-cm="cd ~/gh/cm-vault-issuer"
 
 alias t-m="git switch talos-master; git pull"
 alias mb="${HOME}/scripts/make_branch.sh"
@@ -71,4 +72,11 @@ alias helmfile='docker run --rm --net=host -v "${HOME}/.kube:/root/.kube" -v "${
 alias ans_lap="ansible-playbook -K ty-tool.yml"
 alias zzz="pkill zoom"
 alias app="./apply_template.sh kind-unigone"
+alias rmz="rm *.tgz"
 
+# bgctl
+# ALIAS START
+alias bgctl="docker container run -it --rm --name=bgctl --user :  -it -v /tmp:/tmp -v ~/.kube:/opt/bg-devops-cli/app/.kube -e KUBECONFIG=/opt/bg-devops-cli/app/.kube/config:/opt/bg-devops-cli/app/.kube/config-auto artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest"
+# ALIAS END
+
+source ~/.bg-auth/profile &> ~/.bg-auth/source_status
