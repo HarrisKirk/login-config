@@ -57,4 +57,7 @@ alias zzz="pkill zoom"
 alias app="./apply_template.sh kind-unigone"
 alias rmz="rm *.tgz"
 
+# Docker aliases
+alias dcl="docker rmi -f \$(docker images -q)"
+alias dls="docker image ls"
 
