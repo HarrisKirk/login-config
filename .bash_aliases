@@ -58,4 +58,3 @@ alias app="./apply_template.sh kind-unigone"
 alias rmz="rm *.tgz"
 
 
-source ~/.bg-auth/profile &> ~/.bg-auth/source_status
