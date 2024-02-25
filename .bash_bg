@@ -11,9 +11,9 @@ source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
 
 export BG_CLI_VERSION=latest
 function bgcli {
-    docker container run -it --rm --name=bgctl --user :  -it -v /tmp:/tmp -v ~/.kube:/opt/bg-devops-cli/app/.kube -e KUBECONFIG=/opt/bg-devops-cli/app/.kube/config:/opt/bg-devops-cli/app/.kube/config-auto artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:${BG_CLI_VERSION} "$@"
+    docker container run -it --rm --name=bgctl --user :  -it -v /tmp:/tmp -v ~/.kube:/opt/bg-devops-cli/app/.kube -e ARTIFACTORY_PW -e KUBECONFIG=/opt/bg-devops-cli/app/.kube/config:/opt/bg-devops-cli/app/.kube/config-auto artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:${BG_CLI_VERSION} "$@"
 }
-export -f bgctl
+export -f bgcli
 
 
 
