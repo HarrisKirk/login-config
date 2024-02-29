@@ -58,6 +58,6 @@ alias app="./apply_template.sh kind-unigone"
 alias rmz="rm *.tgz"
 
 # Docker aliases
-alias dcl="docker rmi -f \$(docker images -q)"
 alias dls="docker image ls"
+alias dcl="docker rmi \$(docker images | grep bg-devops-cli | awk '{print \$3}')"
 
