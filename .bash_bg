@@ -9,11 +9,6 @@ source ~/.bg-auth/profile &> ~/.bg-auth/source_status
 TZ='America/New_York'; export TZ
 source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
 
-export BG_CLI_VERSION=latest
-function bgcli {
-    docker container run -it --rm -v /tmp:/tmp -v ~/.kube:/opt/bg-devops-cli/app/.kube artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:${BG_CLI_VERSION} "$@"
-}
-export -f bgcli
-
+alias bgcli="docker container run --rm --network host -it -v /tmp:/tmp -v /home/berkshiregrey.com/harris.kirk/.kube:/opt/bg-devops-cli/app/.kube artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest bgcli"
 
 

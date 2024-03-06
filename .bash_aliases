@@ -44,7 +44,7 @@ alias gh-du="cd ~/gh/devops-utilities"
 alias gh-helm="cd ~/gh/helm-sandbox"
 alias gh-cm="cd ~/gh/cm-vault-issuer"
 alias gh-bg="cd ~/gh/bg-devops-cli"
-
+alias gg="gitk"
 
 alias t-m="git switch talos-master; git pull"
 alias mb="${HOME}/scripts/make_branch.sh"
