@@ -44,6 +44,7 @@ alias gh-du="cd ~/gh/devops-utilities"
 alias gh-helm="cd ~/gh/helm-sandbox"
 alias gh-cm="cd ~/gh/cm-vault-issuer"
 alias gh-bg="cd ~/gh/bg-devops-cli"
+alias gh-cy="cd ~/gh/cybertron"
 alias gg="gitk"
 alias gm="git switch main"
 
