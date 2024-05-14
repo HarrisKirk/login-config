@@ -14,7 +14,7 @@ alias tc="vim ~/.tmux.conf"
 #
 alias gs="git status"
 alias gb="git fetch; git branch -vv"
-alias glo="git log --oneline --max-count=30"
+alias glo='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s" --date=short -7'
 alias gpoh="git push origin HEAD"
 alias gd="git diff --name-status"
 alias ggraph="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
@@ -61,5 +61,4 @@ alias rmz="rm *.tgz"
 
 # Docker aliases
 alias dls="docker image ls"
-alias dcl="docker rmi \$(docker images | grep bg-devops-cli | awk '{print \$3}')"
 

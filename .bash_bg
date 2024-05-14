@@ -11,4 +11,7 @@ source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
 
 alias bgcli="docker container run --rm --network host -it -v /tmp:/tmp -v /home/berkshiregrey.com/harris.kirk/.kube:/opt/bg-devops-cli/.kube artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest bgcli"
 
+alias dcl="docker rmi -f \$(docker images | grep bg-devops-cli | awk '{print \$3}')"
+alias dpi="docker pull artifactory.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest"
+
 
