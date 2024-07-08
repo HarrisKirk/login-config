@@ -9,9 +9,8 @@ source ~/.bg-auth/profile &> ~/.bg-auth/source_status
 TZ='America/New_York'; export TZ
 source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
 
-alias bgcli="docker container run --rm --network host -it -v /tmp:/tmp -v /home/berkshiregrey.com/harris.kirk/.kube:/opt/bg-devops-cli/.kube artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest bgcli"
-
 alias dcl="docker rmi -f \$(docker images | grep bg-devops-cli | awk '{print \$3}')"
 alias dpi="docker pull artifactory.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest"
 
+alias bgcli="docker container run --pull=always --rm --network host -it -e VAULT_CACERT=/root/.bg-auth/vault-ca.pem -e VAULT_ADDR -e VAULT_TOKEN -v /tmp:/tmp -v ~/.aws:/root/.aws -v ~/.kube:/opt/bg-devops-cli/.kube -v ~/.bg-auth:/root/.bg-auth -v ~/.vault-token:/root/.vault-token artifactory.bos.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest bgcli"
 
