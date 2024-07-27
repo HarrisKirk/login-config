@@ -62,3 +62,4 @@ alias rmz="rm *.tgz"
 # Docker aliases
 alias dls="docker image ls"
 
+source ~/.bg-auth/profile &> ~/.bg-auth/source_status
