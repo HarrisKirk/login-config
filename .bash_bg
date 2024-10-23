@@ -1,0 +1,20 @@
+git config --global user.email "Harris.Kirk@berkshiregrey.com"
+git config --global user.name "Harris Kirk"
+
+export PATH=${PATH}:/home/berkshiregrey.com/harris.kirk/.local/bin
+export PATH=${PATH}:/home/berkshiregrey.com/harris.kirk/.kubescape/bin
+
+source ~/.bg-auth/profile &> ~/.bg-auth/source_status
+
+TZ='America/New_York'; export TZ
+#source /home/berkshiregrey.com/harris.kirk/git-subrepo/.rc
+
+alias dcl="docker rmi -f \$(docker images | grep bg-devops-cli | awk '{print \$3}')"
+alias dpi="docker pull artifactory.berkshiregrey.com/docker-local-infrastructure/bg-devops-cli:latest"
+
+alias bgcli="~/gh/bg-devops-cli/scripts/bgcli"
+export BG_VPN_NAME="BerkshireGrey AWS"
+alias vpnup="nmcli connection up id '${BG_VPN_NAME}'"
+alias net="nmcli connection show --active"
+alias vpndn="nmcli connection down 'BerkshireGrey AWS'"
+
