@@ -17,4 +17,6 @@ export BG_VPN_NAME="BerkshireGrey AWS"
 alias vpnup="nmcli connection up id '${BG_VPN_NAME}'"
 alias net="nmcli connection show --active"
 alias vpndn="nmcli connection down 'BerkshireGrey AWS'"
+alias citool="docker container run artifactory.berkshiregrey.com/docker-local-infrastructure/devops-ci-tools"
+alias netstart="systemctl restart NetworkManager"
 
