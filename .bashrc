@@ -104,9 +104,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
 fi
-if [ -f ~/.bash_bg ]; then
-    . ~/.bash_bg
-fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
