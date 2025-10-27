@@ -4,5 +4,7 @@ sudo apt install git
 git config --global user.name "Harris Kirk"
 git config --global user.email "cjtkirk@protonmail.com"
 
+sudo apt install -y gitk
+
 echo "[INFO] Next: copy ~/.ssh/id_rsa.pub to github UI"
   
